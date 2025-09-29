@@ -1,12 +1,12 @@
-# Projeto Cifra de César
-Projeto criado para praticar conhecimentos adquiridos durante o curso Formação.DEV e consolidar habilidades em HTML, CSS e JavaScript.
+# Project Caesar Cipher
+Educational project created to practice knowledge acquired during the Formação.DEV course and consolidate skills in HTML, CSS and JavaScript.
 
 Durante a implementação, pratiquei...
 ... consolidando meu aprendizado de HTML, CSS e JavaScript.
 
 
 <p align="center">
-<img src="" alt="web app working" width="400px"></img>
+<img src="./assets/caeser-cypher-project.png" alt="web app working" width="400px"></img>
 </p>
 
 ## 🤔 What is this project

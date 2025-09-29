@@ -1,8 +1,9 @@
 const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
-const selector = document.getElementById("moving");
+const selector = document.getElementById("displacement");
 const text = document.getElementById("to-encrypt");
 const button = document.getElementById("button");
+const response = document.getElementById("response")
 
 
 for(let i = 0; i < alphabet.length; i++) {
@@ -10,31 +11,34 @@ for(let i = 0; i < alphabet.length; i++) {
 }
 
 button.addEventListener("click", () => {
-    const textToEncrypt = text.value;
-    const lettermoving = +selector.value;
-    const decode = encrypt(textToEncrypt, lettermoving)
+    let textToEncrypt = text.value;
+    let displacement = +selector.value;
 
-    console.log('entrei', textToEncrypt)
+    let decoded = toEncrypt(textToEncrypt, displacement);
+    response.classList.remove("invisible")
+    response.innerText = decoded
+//     console.log(decoded);
 })
 
-function encrypt(text, lettermoving) {
-    let textUpper = text.toUpperCase().split("");
-    let encryptedText = []
+function toEncrypt(text, displacement) {
+    let textUpperCase = text.toUpperCase().split("");
+    let encryptedText = [];
 
-    for(let i = 0; i < textUpper.length; i++) {
-        let indiceOfLetter = alphabet.indexOf(textUpper[i])
+    for(let i = 0; i < textUpperCase.length; i++) {
+        let indiceOfLetter = alphabet.indexOf(textUpperCase[i])
         if(indiceOfLetter >= 0) {
-            encryptedText.push(letterByIndice(indiceOfLetter + lettermoving))
+            encryptedText.push(letterByIndice(indiceOfLetter + displacement))
         } else {
-            encryptedText.push(textUpper[i])
+            encryptedText.push(textUpperCase[i])
         }
-        console.log(encryptedText)
     }
+    // console.log(encryptedText)
+    return encryptedText.join("")
 }
 
 function letterByIndice(indice) {
     let finalIndice
-    if(indice <= 0) {
+    if(indice >= 0) {
         finalIndice = indice % alphabet.length
     } else {
         finalIndice = alphabet.length + indice % alphabet.length
