@@ -1,8 +1,11 @@
 # Project Caesar Cipher
-Educational project created to practice knowledge acquired during the Formação.DEV course and consolidate skills in HTML, CSS and JavaScript.
+This project was created as a learning exercise during the Formação.DEV course.
 
-Durante a implementação, pratiquei...
-... consolidando meu aprendizado de HTML, CSS e JavaScript.
+It is a simplified implementation of the classic **Caesar Cipher**, focusing only on the **encryption process**.  
+
+The application allows users to enter a message and shift value, generating the encrypted text based on the Caesar Cipher technique.
+
+The main goal of this project was to practice **HTML, CSS, and JavaScript** by building a small, interactive web application.
 
 
 <p align="center">
@@ -10,7 +13,8 @@ Durante a implementação, pratiquei...
 </p>
 
 ## 🤔 What is this project
-This project is a web application developed in HTML, CSS and Javascript which ...
+The Caesar Cipher is one of the oldest and simplest encryption techniques.  
+In this project, I implemented only the **encryption** feature, where each letter of the input text is shifted by a given number of positions in the alphabet. 
 
 ## 🖥️ How to run the project
 To run the project, simply double-click the *index.html* file once the project folder is open in your operating system's file system. 
